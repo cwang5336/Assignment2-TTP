@@ -57,7 +57,6 @@ function mySome(array, cb) {
   console.log("Test for mySome")
   console.log(mySome([1, 2, 3, 4, 5], item => item >= 3))
 
-
 // Every
 
 function myEvery(array, cb) {
@@ -153,6 +152,35 @@ function myUnshift(arr, value) {
 
 // Object.keys()
 
+function grabKeys(object){
+    let newArray=[];
+    for(element in object) {
+        newArray.push(element);
+    }
+    return newArray;
+}
 
+console.log("Test for myUnshift")
+const object1 = {
+    a: 123,
+    b: 321,
+    c: 'ABC'
+};
+console.log(grabKeys(object1));
 
 // Object.values()
+
+function grabValues(object){
+    let newArray=[];
+    for(element in object)
+       newArray.push(object[element]);
+    return newArray;
+}
+
+console.log("Test for myUnshift")
+const object2 = {
+    CSI: 'CUNY',
+    Stoneybrook: 'SUNY',
+    NYU: 'Private'
+};
+console.log(grabValues(object2));
